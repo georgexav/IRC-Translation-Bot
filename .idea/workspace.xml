@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Changed version number to 3.0 in AboutCommand.py">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Added /irc_client.spec to .gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <workItem from="1764274518868" duration="750000" />
       <workItem from="1764275284764" duration="61000" />
       <workItem from="1764275382564" duration="77000" />
-      <workItem from="1764275511141" duration="2533000" />
+      <workItem from="1764275511141" duration="2736000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -135,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764276245201</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added /irc_client.spec to .gitignore">
+      <option name="closed" value="true" />
+      <created>1764278140159</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764278140159</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +151,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Changed version number to 3.0 in AboutCommand.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed version number to 3.0 in AboutCommand.py" />
+    <MESSAGE value="Added /irc_client.spec to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added /irc_client.spec to .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
