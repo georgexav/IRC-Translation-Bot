@@ -1,0 +1,10 @@
+{
+  "server" : "bitcoin.uk.eu.dal.net",
+  "port" : "6697",
+  "nickname" : "bot9",
+  "password" : "Quantum123@",
+  "real_name" : "asi9''s translation bot",
+  "source_channel" : "test3",
+  "target_channel" : "test4",
+  "target_lang" : "en"
+}
