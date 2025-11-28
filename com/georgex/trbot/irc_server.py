@@ -112,13 +112,15 @@ class IrcServer:
         :return: the translated PRIVMSG message sent to the server
         """
         chat_message = ChatMessage(message)
-        condition_a = self.is_source_channel(chat_message.get_channel())
-        condition_b = self.is_target_channel(chat_message.get_channel())
-        if (not (condition_a or condition_b) ):
+        is_source_channel = self.is_source_channel(chat_message.get_channel())
+        is_target_channel = self.is_target_channel(chat_message.get_channel())
+        if (not (is_source_channel or is_target_channel) ):
             return
         if (chat_message.is_bot_command(self.nickname)):
             self.onBotCommand(chat_message)
             return
+        if (not is_source_channel):
+            return;
         sender_nick = chat_message.get_sender_nick()
         try:
             detected_lang = self.translator.get_language_code(chat_message.get_chat_message())
