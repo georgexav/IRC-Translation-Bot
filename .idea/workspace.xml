@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Added an item in the configuration file for the URL of the LibreTranslate server.">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Bug fix. &#10;&#10;The bot was translating messages sent in BOTH source and target channels. With this fix, it will only translate messages received in the source channel.  Messages received directly in the target channel will be ignored.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" afterDir="false" />
     </list>
@@ -93,7 +93,7 @@
       <workItem from="1764274518868" duration="750000" />
       <workItem from="1764275284764" duration="61000" />
       <workItem from="1764275382564" duration="77000" />
-      <workItem from="1764275511141" duration="16880000" />
+      <workItem from="1764275511141" duration="20747000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -167,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764296742425</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bug fix. &#10;&#10;The bot was translating messages sent in BOTH source and target channels. With this fix, it will only translate messages received in the source channel.  Messages received directly in the target channel will be ignored.">
+      <option name="closed" value="true" />
+      <created>1764342243262</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764342243262</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +187,8 @@
     <MESSAGE value="Added /irc_client.spec to .gitignore" />
     <MESSAGE value="Removed harcoded reference to configuration file. After the change the configuration file lookup logic is: if the configuration file path is not specified as the first command line argument, the sytem will look in the user's home directory for a file named TranslationBotConfig.json" />
     <MESSAGE value="Added an item in the configuration file for the URL of the LibreTranslate server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an item in the configuration file for the URL of the LibreTranslate server." />
+    <MESSAGE value="Bug fix. &#10;&#10;The bot was translating messages sent in BOTH source and target channels. With this fix, it will only translate messages received in the source channel.  Messages received directly in the target channel will be ignored." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix. &#10;&#10;The bot was translating messages sent in BOTH source and target channels. With this fix, it will only translate messages received in the source channel.  Messages received directly in the target channel will be ignored." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,7 +209,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IrcTranslationBot$argos_translate_gui.coverage" NAME="argos-translate-gui Coverage Results" MODIFIED="1764225605342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python313/Scripts" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcClient.coverage" NAME="IrcClient Coverage Results" MODIFIED="1764260863611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
-    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764296498073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
+    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764342038480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcServer.coverage" NAME="IrcServer Coverage Results" MODIFIED="1764201104091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
   </component>
 </project>

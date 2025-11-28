@@ -162,12 +162,12 @@ class IrcServer:
     def is_source_channel(self, channel):
         source_channel = self.app_config.get_source_channel() if self.app_config.get_source_channel().startswith("#") else "#" + self.app_config.get_source_channel()
         current_channel = channel if channel.startswith("#") else "#" + channel()
-        return current_channel == source_channel
+        return current_channel.lower() == source_channel.lower()
 
     def is_target_channel(self, channel):
         target_channel = self.app_config.get_target_channel() if self.app_config.get_target_channel().startswith("#") else "#" + self.app_config.get_target_channel()
         current_channel = channel if channel.startswith("#") else "#" + channel()
-        return current_channel == target_channel
+        return current_channel.lower() == target_channel.lower()
 
     def disconnect(self):
         """ Disconnect from IRC server """
