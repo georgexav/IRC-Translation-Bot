@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Added /irc_client.spec to .gitignore">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Removed harcoded reference to configuration file. After the change the configuration file lookup logic is: if the configuration file path is not specified as the first command line argument, the sytem will look in the user's home directory for a file named TranslationBotConfig.json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/app_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/app_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/translator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,27 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.IrcClient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.IrcServer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.argos-translate-gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.irc_client.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/g3org/PycharmProjects/IrcTranslationBot&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.IrcClient.executor": "Run",
+    "Python.IrcServer.executor": "Run",
+    "Python.argos-translate-gui.executor": "Run",
+    "Python.irc_client.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/g3org/PycharmProjects/IrcTranslationBot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\g3org\PycharmProjects\IrcTranslationBot\com\georgex\trbot" />
@@ -93,7 +96,7 @@
       <workItem from="1764274518868" duration="750000" />
       <workItem from="1764275284764" duration="61000" />
       <workItem from="1764275382564" duration="77000" />
-      <workItem from="1764275511141" duration="6938000" />
+      <workItem from="1764275511141" duration="10113000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -151,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764278469631</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Removed harcoded reference to configuration file. After the change the configuration file lookup logic is: if the configuration file path is not specified as the first command line argument, the sytem will look in the user's home directory for a file named TranslationBotConfig.json">
+      <option name="closed" value="true" />
+      <created>1764289970784</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764289970784</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,15 +172,21 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Changed version number to 3.0 in AboutCommand.py" />
     <MESSAGE value="Added /irc_client.spec to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added /irc_client.spec to .gitignore" />
+    <MESSAGE value="Removed harcoded reference to configuration file. After the change the configuration file lookup logic is: if the configuration file path is not specified as the first command line argument, the sytem will look in the user's home directory for a file named TranslationBotConfig.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed harcoded reference to configuration file. After the change the configuration file lookup logic is: if the configuration file path is not specified as the first command line argument, the sytem will look in the user's home directory for a file named TranslationBotConfig.json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/com/georgex/trbot/irc_server.py</url>
-          <line>158</line>
+          <line>159</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/com/georgex/trbot/irc_client.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -177,7 +194,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IrcTranslationBot$argos_translate_gui.coverage" NAME="argos-translate-gui Coverage Results" MODIFIED="1764225605342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python313/Scripts" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcClient.coverage" NAME="IrcClient Coverage Results" MODIFIED="1764260863611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
-    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764289514258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
+    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764296430220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcServer.coverage" NAME="IrcServer Coverage Results" MODIFIED="1764201104091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
   </component>
 </project>

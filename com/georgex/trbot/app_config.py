@@ -14,6 +14,10 @@ class AppConfiguration:
             self.target_channel = self.json_data['target_channel']
             self.target_lang = self.json_data['target_lang']
             self.password = self.json_data['password']
+            self.libre_translate_url = self.json_data['libre_translate_url']
+
+    def get_libre_translate_url(self):
+        return self.libre_translate_url
 
     def get_server(self):
         return self.irc_server

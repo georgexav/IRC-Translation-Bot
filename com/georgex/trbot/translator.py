@@ -4,10 +4,13 @@ import requests
 import json
 
 class Translator:
+
     def __init__(self):
-        self.libre_url = "http://127.0.0.1:5000/translate"
-        #self.json_request = json.dumps('{"q" : "", "source" : "", "target" : ""}')
+        self.libre_url = None
         self.headers = {'Content-Type': 'application/json'}
+
+    def set_libre_url(self, url):
+        self.libre_url = url
 
     def get_language_code(self, text):
         return detect(text)

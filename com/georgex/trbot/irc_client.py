@@ -1,9 +1,9 @@
 """
 Runnable script for IRC Translation Bot.
 """
-import argparse
 import os
 import sys
+import traceback
 from pathlib import Path
 
 from com.georgex.trbot.app_config import AppConfiguration
@@ -22,7 +22,7 @@ def get_config_file():
     return config_file_path
 
 try:
-    parser = argparse.ArgumentParser(description='Configuration for translation bot')
+    #parser = argparse.ArgumentParser(description='Configuration for translation bot')
     config_file_path = get_config_file()
     app_config = AppConfiguration(config_file_path)
     client_console = ClientConsole()
@@ -41,6 +41,7 @@ except KeyboardInterrupt:
     sys.exit(0)
 except Exception as e:
     print('ERROR:', e)
+    traceback.print_exc()
     if (irc_server != None):
         irc_server.disconnect()
     sys.exit(-1)

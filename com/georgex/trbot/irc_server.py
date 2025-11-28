@@ -42,6 +42,7 @@ class IrcServer:
         self.last_pong_time = None
         self.irc_command = None
         self.translator = Translator()
+        self.translator.set_libre_url(app_config.get_libre_translate_url())
 
     def connect(self):
         """ Connect to IRC server """
