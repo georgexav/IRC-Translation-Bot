@@ -1,4 +1,5 @@
 from com.georgex.trbot.command.AboutCommand import AboutCommand
+from com.georgex.trbot.command.StatsCommand import StatsCommand
 
 class BotCommandFactory:
 
@@ -15,4 +16,6 @@ class BotCommandFactory:
         self.bot_command = self.tokens[1]
         if (self.bot_command_indicator.lower()  == 'about'):
             return AboutCommand(chat_message)
+        if (self.bot_command_indicator.lower()  == 'stats'):
+            return StatsCommand(chat_message)
         return None

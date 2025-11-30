@@ -56,7 +56,7 @@ class IrcServer:
         self.secure_socket = ssl_context.wrap_socket(self.irc_socket, server_hostname=self.irc_server)
         self.message_stream = self.secure_socket.makefile('r')
         self.secure_socket.connect((self.irc_server, self.irc_port))
-        self.start_time = datetime.now()
+        self.start_time = datetime.now().astimezone()
         self.last_pong_time = self.start_time
         self.secure_socket.send(f"USER {self.nickname} 0 * :{self.real_name}\r\n".encode('utf-8'))
         self.secure_socket.send(f"NICK {self.nickname}\r\n".encode('utf-8'))
