@@ -14,7 +14,10 @@ class ServerMessage:
         return self.message
 
     def is_ping(self):
-        return self.message_type == "PING"
+        return self.message_type.upper() == "PING"
+
+    def is_pong(self):
+        return self.message_type.upper() == "PONG"
 
     def is_privmsg(self):
-        return self.message_type == "PRIVMSG"
+        return self.message_type.upper() == "PRIVMSG"

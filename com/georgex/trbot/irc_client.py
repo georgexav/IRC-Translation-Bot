@@ -28,7 +28,8 @@ try:
     client_console = ClientConsole()
     translator = Translator()
     irc_server = IrcServer(app_config)
-    irc_server.register_listener(client_console.on_server_event)
+    irc_server.register_server_event_listener(client_console.on_server_event)
+    irc_server.register_pulse_check_event_listener(client_console.on_pulse_check_event)
     irc_server.connect()
     while irc_server.connected():
         continue

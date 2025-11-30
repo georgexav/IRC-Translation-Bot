@@ -15,6 +15,14 @@ class AppConfiguration:
             self.target_lang = self.json_data['target_lang']
             self.password = self.json_data['password']
             self.libre_translate_url = self.json_data['libre_translate_url']
+            self.max_seconds_without_ping = self.json_data['max_seconds_without_ping']
+            self.max_ping_tries = self.json_data['max_ping_tries']
+
+    def get_max_seconds_without_ping(self):
+        return self.max_seconds_without_ping
+
+    def get_max_ping_tries(self):
+        return self.max_ping_tries
 
     def get_libre_translate_url(self):
         return self.libre_translate_url

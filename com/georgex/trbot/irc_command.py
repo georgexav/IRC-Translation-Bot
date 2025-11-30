@@ -10,6 +10,11 @@ class IrcCommand:
         """
         self.secure_socket = secure_socket
 
+    def ping(self, token):
+        command = f"PING :{token}"
+        self.send_command(command)
+        return command
+
     def get_join_command(self, channel):
         """
         Returns a JOIN channel command that can be sent to the IRC server.
