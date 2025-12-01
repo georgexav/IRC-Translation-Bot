@@ -60,7 +60,8 @@ class IrcServer:
         self.last_pong_time = self.start_time
         self.secure_socket.send(f"USER {self.nickname} 0 * :{self.real_name}\r\n".encode('utf-8'))
         self.secure_socket.send(f"NICK {self.nickname}\r\n".encode('utf-8'))
-        self.secure_socket.send(f"IDENTIFY {self.password}\r\n".encode('utf-8'))
+        if (not (self.password == None or len(self.password) == 0)):
+            self.secure_socket.send(f"IDENTIFY {self.password}\r\n".encode('utf-8'))
         self.is_connected = True
         self.pulse_check = PulseCheck(self.start_time, self.app_config)
         self.message_thread = threading.Thread(target=self.process_message, daemon=True)
