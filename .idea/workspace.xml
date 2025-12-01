@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Added stats command.">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Changed logic of determining time of last heart beat: it is now set to the time of the most recent message from the server.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/bot_command_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/command/bot_command_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1764275382564" duration="77000" />
       <workItem from="1764275511141" duration="72275000" />
       <workItem from="1764537454877" duration="227000" />
-      <workItem from="1764537984703" duration="9298000" />
+      <workItem from="1764537984703" duration="11494000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -208,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764540509388</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changed logic of determining time of last heart beat: it is now set to the time of the most recent message from the server.">
+      <option name="closed" value="true" />
+      <created>1764552759868</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764552759868</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +230,8 @@
     <MESSAGE value="Bug fix. &#10;&#10;When determing if a PRIVMSG was from the source channel or target channel, the comparison was being done in a case sensitive manner.  This posed issues given implementation differences between IRC servers.  Now, the comparison is done after transforming all strings involved to lower case." />
     <MESSAGE value="Implemented a pulse check for connection to the IRC server.  The frequency of the check is a configurable parameter." />
     <MESSAGE value="Added stats command." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added stats command." />
+    <MESSAGE value="Changed logic of determining time of last heart beat: it is now set to the time of the most recent message from the server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed logic of determining time of last heart beat: it is now set to the time of the most recent message from the server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

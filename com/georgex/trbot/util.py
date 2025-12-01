@@ -7,4 +7,4 @@ class Util:
         remaining_seconds = total_seconds % 3600
         minutes = int(remaining_seconds // 60)
         seconds = round(remaining_seconds % 60)
-        return f'Hours: {hours} Minutes:{minutes} Seconds:{seconds}'
+        return f'{hours} hours, {minutes} minutes and {seconds} seconds'
