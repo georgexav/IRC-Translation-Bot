@@ -6,15 +6,14 @@ import time
 import traceback
 from datetime import datetime
 
-import com.georgex.trbot.pulse_check
-from com.georgex.trbot.chat_message import ChatMessage
-from com.georgex.trbot.irc_command import IrcCommand
-from com.georgex.trbot.server_event import ServerEvent
-from com.georgex.trbot.server_message import ServerMessage
-from com.georgex.trbot.translator import Translator
-from com.georgex.trbot.command.bot_command_factory import BotCommandFactory
-from com.georgex.trbot.pulse_check import PulseCheck
-from com.georgex.trbot.client_stats import ClientStats
+from chat_message import ChatMessage
+from irc_command import IrcCommand
+from server_event import ServerEvent
+from server_message import ServerMessage
+from translator import Translator
+from bot_command_factory import BotCommandFactory
+from pulse_check import PulseCheck
+from client_stats import ClientStats
 
 class IrcServer:
     """

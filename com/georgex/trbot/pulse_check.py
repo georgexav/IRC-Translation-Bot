@@ -1,7 +1,7 @@
 import threading
 import time
 from datetime import datetime
-from com.georgex.trbot.app_config import AppConfiguration
+from app_config import AppConfiguration
 
 class PulseCheck:
     """

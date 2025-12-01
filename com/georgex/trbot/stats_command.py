@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from com.georgex.trbot.client_stats import ClientStats
-from com.georgex.trbot.command.AbstractBotCommand import AbstractBotCommand
-from com.georgex.trbot.util import Util
+from client_stats import ClientStats
+from abstract_bot_command import AbstractBotCommand
+from util import Util
 
 
 class StatsCommand(AbstractBotCommand):

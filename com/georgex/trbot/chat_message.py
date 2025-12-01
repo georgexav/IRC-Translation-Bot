@@ -1,4 +1,4 @@
-from com.georgex.trbot.server_message import ServerMessage
+from server_message import ServerMessage
 
 class ChatMessage(ServerMessage):
     """

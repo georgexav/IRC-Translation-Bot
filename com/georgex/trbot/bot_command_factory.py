@@ -1,5 +1,5 @@
-from com.georgex.trbot.command.AboutCommand import AboutCommand
-from com.georgex.trbot.command.StatsCommand import StatsCommand
+from about_command import AboutCommand
+from stats_command import StatsCommand
 
 class BotCommandFactory:
 

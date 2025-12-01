@@ -1,6 +1,6 @@
 import langcodes
 
-from com.georgex.trbot.command.AbstractBotCommand import AbstractBotCommand
+from abstract_bot_command import AbstractBotCommand
 
 class AboutCommand(AbstractBotCommand):
     def __init__(self, message):

@@ -6,10 +6,10 @@ import sys
 import traceback
 from pathlib import Path
 
-from com.georgex.trbot.app_config import AppConfiguration
-from com.georgex.trbot.client_console import ClientConsole
-from com.georgex.trbot.irc_server import IrcServer
-from com.georgex.trbot.translator import Translator
+from app_config import AppConfiguration
+from client_console import ClientConsole
+from irc_server import IrcServer
+from translator import Translator
 
 DEFAULT_CONFIG_FILE='TranslationBotConfig.json'
 irc_server = None

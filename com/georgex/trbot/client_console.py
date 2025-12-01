@@ -1,7 +1,6 @@
 from datetime import datetime
 
-import com
-from com.georgex.trbot.server_event import ServerEvent
+from server_event import ServerEvent
 
 class ClientConsole:
 
