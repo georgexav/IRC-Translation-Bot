@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Modified the output of the &quot;about&quot; command for the bot.">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Update the README file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -101,7 +101,7 @@
       <workItem from="1764275511141" duration="72275000" />
       <workItem from="1764537454877" duration="227000" />
       <workItem from="1764537984703" duration="15673000" />
-      <workItem from="1764598933130" duration="8312000" />
+      <workItem from="1764598933130" duration="9412000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -239,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764603411144</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update the README file.">
+      <option name="closed" value="true" />
+      <created>1764620187194</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764620187194</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +267,8 @@
     <MESSAGE value="Minor format changes in output of stats command." />
     <MESSAGE value="IDENTIFY command is sent only if a password is specified in the configuration file." />
     <MESSAGE value="Modified the output of the &quot;about&quot; command for the bot." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified the output of the &quot;about&quot; command for the bot." />
+    <MESSAGE value="Update the README file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the README file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

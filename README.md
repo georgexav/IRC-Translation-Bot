@@ -38,6 +38,7 @@ IRC Translation Bot uses a JSON-format configuration file as shown below:
   "max_ping_tries" : "3"  
 }
 
+You create this file locally with the tags as shown above.
 
 ## Usage
 
