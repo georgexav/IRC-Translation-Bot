@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Implemented a pulse check for connection to the IRC server.  The frequency of the check is a configurable parameter.">
-      <change afterPath="$PROJECT_DIR$/com/georgex/trbot/command/StatsCommand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/georgex/trbot/util.py" afterDir="false" />
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Added stats command.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/bot_command_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/command/bot_command_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <workItem from="1764275382564" duration="77000" />
       <workItem from="1764275511141" duration="72275000" />
       <workItem from="1764537454877" duration="227000" />
-      <workItem from="1764537984703" duration="1777000" />
+      <workItem from="1764537984703" duration="9298000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -201,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764520210817</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added stats command.">
+      <option name="closed" value="true" />
+      <created>1764540509388</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764540509388</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,19 +223,20 @@
     <MESSAGE value="Bug fix. &#10;&#10;The bot was translating messages sent in BOTH source and target channels. With this fix, it will only translate messages received in the source channel.  Messages received directly in the target channel will be ignored." />
     <MESSAGE value="Bug fix. &#10;&#10;When determing if a PRIVMSG was from the source channel or target channel, the comparison was being done in a case sensitive manner.  This posed issues given implementation differences between IRC servers.  Now, the comparison is done after transforming all strings involved to lower case." />
     <MESSAGE value="Implemented a pulse check for connection to the IRC server.  The frequency of the check is a configurable parameter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented a pulse check for connection to the IRC server.  The frequency of the check is a configurable parameter." />
+    <MESSAGE value="Added stats command." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stats command." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/com/georgex/trbot/irc_server.py</url>
-          <line>208</line>
+          <line>211</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/com/georgex/trbot/pulse_check.py</url>
-          <line>78</line>
+          <line>86</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -242,10 +250,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IrcTranslationBot$argos_translate_gui.coverage" NAME="argos-translate-gui Coverage Results" MODIFIED="1764225605342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python313/Scripts" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$StatsCommand.coverage" NAME="StatsCommand Coverage Results" MODIFIED="1764536518700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot/command" />
-    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_server.coverage" NAME="irc_server Coverage Results" MODIFIED="1764391425252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
+    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_server.coverage" NAME="irc_server Coverage Results" MODIFIED="1764548421600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcClient.coverage" NAME="IrcClient Coverage Results" MODIFIED="1764260863611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$pulse_check.coverage" NAME="pulse_check Coverage Results" MODIFIED="1764453507231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
-    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764539160495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
+    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764550017128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcServer.coverage" NAME="IrcServer Coverage Results" MODIFIED="1764201104091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
   </component>
 </project>

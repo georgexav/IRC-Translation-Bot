@@ -1,6 +1,7 @@
 import threading
 import time
 from datetime import datetime
+from com.georgex.trbot.app_config import AppConfiguration
 
 class PulseCheck:
     """
@@ -8,14 +9,19 @@ class PulseCheck:
         Checks periodically if the connection to the IRC server is still alive.  Fires a LostConnection event
         when the connection to the IRC server is lost.
     """
-    def __init__(self, last_heart_beat_time, max_seconds_without_ping, max_ping_requests):
-        '''
-        Constructor
-            last_heart_beat_time: the last time the IRC server sent a PING or responded with a PONG. When the bot starts
-            this field is initialized to the start time.
+    def __init__(self, start_time, app_config,):
+        self.last_heart_beat_time = start_time
+        self.max_seconds_without_ping = int(app_config.get_max_seconds_without_ping())
 
-            check_frequency: how often the connection to the IRC server is checked.  This value is to be specifed in seconds.
-        '''
+        self.pulse_check_listeners = []
+        self.ping_token = ''
+        self.ping_count = 0
+        self.time_since_last_hearbeat = 0
+        self.max_ping_requests = int(app_config.get_max_ping_tries())
+
+    '''
+    def __init__(self, last_heart_beat_time, max_seconds_without_ping, max_ping_requests):
+        
         self.last_heart_beat_time = last_heart_beat_time
         self.max_seconds_without_ping = max_seconds_without_ping
 
@@ -24,6 +30,8 @@ class PulseCheck:
         self.ping_count = 0
         self.time_since_last_hearbeat = 0
         self.max_ping_requests = max_ping_requests
+        
+    '''
 
     def start_pulse_check(self):
         self.message_thread = threading.Thread(target=self.monitor_pulse, daemon=True)

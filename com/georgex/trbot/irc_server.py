@@ -62,6 +62,7 @@ class IrcServer:
         self.secure_socket.send(f"NICK {self.nickname}\r\n".encode('utf-8'))
         self.secure_socket.send(f"IDENTIFY {self.password}\r\n".encode('utf-8'))
         self.is_connected = True
+        self.pulse_check = PulseCheck(self.start_time, self.app_config)
         self.message_thread = threading.Thread(target=self.process_message, daemon=True)
         self.message_thread.start()
         time.sleep(2)
@@ -72,7 +73,7 @@ class IrcServer:
         join_command = self.irc_command.get_join_command(self.target_channel)
         self.fire_server_event(ServerEvent(ServerEvent.OUTGOING_MESSAGE_EVENT,join_command))
         self.irc_command.join_channel(self.target_channel)
-        self.pulse_check = PulseCheck(self.start_time, int(self.app_config.get_max_seconds_without_ping()), int(self.app_config.get_max_ping_tries()))
+
         self.pulse_check.register_pulse_check_listener(self.on_pulse_check_event)
         self.pulse_check.set_last_heart_beat_time(self.start_time)
         self.pulse_check.start_pulse_check()
@@ -85,6 +86,8 @@ class IrcServer:
         while self.is_connected:
             try:
                 for message in self.message_stream:
+                    if (not self.pulse_check == None):
+                        self.pulse_check.set_last_heart_beat_time(datetime.now())
                     self.server_message = ServerMessage(message.strip())
                     message_event = ServerEvent(ServerEvent.INCOMING_MESSAGE_EVENT, self.server_message)
                     self.fire_server_event(message_event)
@@ -135,7 +138,7 @@ class IrcServer:
         :param token: the token to be used for the PONG response
         :return: the PONG response sent to the server
         """
-        self.pulse_check.set_last_heart_beat_time(datetime.now())
+
         pong_command = self.irc_command.pong(token)
         self.ping_count += 1
         ClientStats.ping_count += 1

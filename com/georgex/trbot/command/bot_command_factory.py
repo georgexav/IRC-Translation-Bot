@@ -4,7 +4,12 @@ from com.georgex.trbot.command.StatsCommand import StatsCommand
 class BotCommandFactory:
 
     def __init__(self):
-        pass
+        self.app_config = None
+        self.bot_command_indicator = None
+        self.bot_command = None
+
+    def set_app_config(self, app_config):
+        self.app_config = app_config
 
     def getCommand(self, chat_message):
         self.chat_message = chat_message
