@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Updates to README.&#10;Removed config.json from source tree.">
+    <list default="true" id="a45f579f-0b36-4872-813c-2cca2f2a21fe" name="Changes" comment="Resolved some package addressing issues on the command line.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/chat_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/chat_message.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/client_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/client_console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/AboutCommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/about_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/AbstractBotCommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/abstract_bot_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/StatsCommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/stats_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/command/bot_command_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/bot_command_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/irc_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/georgex/trbot/pulse_check.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +103,7 @@
       <workItem from="1764275511141" duration="72275000" />
       <workItem from="1764537454877" duration="227000" />
       <workItem from="1764537984703" duration="15673000" />
-      <workItem from="1764598933130" duration="14621000" />
+      <workItem from="1764598933130" duration="19390000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -273,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764621403015</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Resolved some package addressing issues on the command line.">
+      <option name="closed" value="true" />
+      <created>1764627375305</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1764627375305</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,14 +296,15 @@
     <MESSAGE value="Update the README file." />
     <MESSAGE value="Updates to README" />
     <MESSAGE value="Updates to README.&#10;Removed config.json from source tree." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to README.&#10;Removed config.json from source tree." />
+    <MESSAGE value="Resolved some package addressing issues on the command line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved some package addressing issues on the command line." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/com/georgex/trbot/irc_server.py</url>
-          <line>211</line>
+          <line>214</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -313,7 +314,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/com/georgex/trbot/irc_server.py</url>
-          <line>61</line>
+          <line>64</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -335,7 +336,7 @@
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcClient.coverage" NAME="IrcClient Coverage Results" MODIFIED="1764260863611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$bot_command_factory.coverage" NAME="bot_command_factory Coverage Results" MODIFIED="1764626920776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot/command" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$pulse_check.coverage" NAME="pulse_check Coverage Results" MODIFIED="1764453507231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
-    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764626927362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
+    <SUITE FILE_PATH="coverage/IrcTranslationBot$irc_client.coverage" NAME="irc_client Coverage Results" MODIFIED="1764628978332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
     <SUITE FILE_PATH="coverage/IrcTranslationBot$IrcServer.coverage" NAME="IrcServer Coverage Results" MODIFIED="1764201104091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/com/georgex/trbot" />
   </component>
 </project>

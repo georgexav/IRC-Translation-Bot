@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from server_event import ServerEvent
+from pulse_check import InfoEvent
 
 class ClientConsole:
 
@@ -28,7 +29,7 @@ class ClientConsole:
         print(f"{formatted_datetime}: OUTGOING: {msg}")
 
     def on_pulse_check_event(self, pulse_check_event):
-        if (isinstance(pulse_check_event, com.georgex.trbot.pulse_check.InfoEvent)):
+        if (isinstance(pulse_check_event, InfoEvent)):
             now = datetime.now()
             formatted_datetime = now.strftime(self.date_formatter)
             print(f"{formatted_datetime}: PULSE CHECK: {pulse_check_event.get_info()}")

@@ -14,6 +14,9 @@ from translator import Translator
 from bot_command_factory import BotCommandFactory
 from pulse_check import PulseCheck
 from client_stats import ClientStats
+from pulse_check import PingRequestEvent
+from pulse_check import InfoEvent
+from pulse_check import LostConnectionEvent
 
 class IrcServer:
     """
@@ -118,10 +121,10 @@ class IrcServer:
         Event handler for pulse check events.
         :param pulse_check_event: the pulse check event which can be a PING request or a lost connection event.
         '''
-        if (isinstance(pulse_check_event, com.georgex.trbot.pulse_check.PingRequestEvent)):
+        if (isinstance(pulse_check_event, PingRequestEvent)):
             self.irc_command.ping(pulse_check_event.ping_token)
             return
-        if (isinstance(pulse_check_event, com.georgex.trbot.pulse_check.InfoEvent)):
+        if (isinstance(pulse_check_event, InfoEvent)):
             self.fire_pulse_check_event(pulse_check_event)
 
     def on_pong(self, pong_token):
