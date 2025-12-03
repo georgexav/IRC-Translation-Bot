@@ -42,7 +42,22 @@ You create this file locally with the tags as shown above.
 
 ## Usage
 
+* Step 1: Start LibreTranslate server
+* Step 2: Run Irc Translation Bot
+
+### Start LibreTranslate server
+
+Switch to the directory where you installed LibreTranslate and run the _libretranslate_ executable to start the LibreTranslate server. If you are starting the server for the first time, language files will be downloaded and this can take a few minutes. 
+
+When the server is running you can check its availability by going to http://localhost:5000 in a browser window.
+
+### Start Irc Translation Bot
+
+Switch to the directory containing _irc_client.py_. Then type:
+
 _python irc_client.py [configuration_file_path]_
+
+
 
 The configuration file path can be specified as the first command line argument to the program.
 If no argument is specified on the command line, the program will look for a file named TranslationBotConfig.json in the user's home directory.
